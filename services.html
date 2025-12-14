@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Darlene's Delightful Catering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .services-page {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary-yellow);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #000000;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/Kxbx97kk/ddclogo.png" alt="Darlene's Delightful Catering" class="logo-img">
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><button class="contact-btn" onclick="location.href='contact.html'">Contact</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Page -->
+    <section class="services-page">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive catering solutions designed to make your event extraordinary and stress-free.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🍽️</div>
+                <h3>Full Catering</h3>
+                <p>Complete catering services for events of all sizes. From elegant weddings to corporate banquets, we handle every culinary detail with professional staff and elegant presentation.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚚</div>
+                <h3>Food Delivery</h3>
+                <p>Fresh, delicious meals delivered to your location. Perfect for intimate gatherings or corporate lunches where full-service staff isn't required.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎉</div>
+                <h3>Event Planning</h3>
+                <p>Comprehensive event coordination and management. We handle venue sourcing, decor, entertainment booking, and timeline management so you can enjoy your celebration.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Menu Customization</h3>
+                <p>Personalized menus crafted for your preferences. Collaborate with our chefs to create a unique culinary experience that reflects your style and dietary needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Let's Plan Your Perfect Event</h2>
+        <p>Ready to experience exceptional catering? Contact us today to discuss your needs and receive a personalized quote.</p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="contact.html" class="btn btn-primary">Get Your Quote</a>
+            <a href="menu.html" class="btn" style="background: transparent; border: 2px solid var(--primary-blue); color: var(--primary-blue);">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://i.ibb.co/Kxbx97kk/ddclogo.png" alt="Darlene's Delightful Catering" class="footer-logo-img">
+                <h3 style="color: var(--primary-yellow); margin-top: 1rem;">Darlene's Delightful Catering</h3>
+                <p>Divine Nourishing: A Place Where Faith and Family Come Together</p>
+                <p>Exceptional catering services for all your special occasions.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Full Catering</a></li>
+                    <li><a href="services.html">Food Delivery</a></li>
+                    <li><a href="services.html">Event Planning</a></li>
+                    <li><a href="services.html">Menu Customization</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📞 <a href="tel:+12405152454" style="color: white;">(240) 515-2454</a></p>
+                <p>✉️ <a href="/cdn-cgi/l/email-protection#b7ded9d1d8f7d3d6c5dbd2d9d2c4d3d2dbded0dfc3d1c2dbd4d6c3d2c5ded9d099d4d8da" style="color: white;"><span class="__cf_email__" data-cfemail="f49d9a929bb490958698919a91879091989d939c8092819897958091869d9a93da979b99">[email&#160;protected]</span></a></p>
+                <p style="margin-top: 1rem;">Ready to plan your event?</p>
+                <a href="contact.html" class="btn" style="margin-top: 1rem; display: inline-block; background: var(--primary-yellow); color: var(--primary-blue); padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 700;">Get Quote</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Darlene's Delightful Catering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>
