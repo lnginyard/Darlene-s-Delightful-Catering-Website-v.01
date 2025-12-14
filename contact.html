@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Darlene's Delightful Catering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-page {
+            background: var(--primary-yellow);
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 2rem auto 0;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 10rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(13, 1, 107, 0.35);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: slategrey;
+            border-color: var(--primary-blue);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem 3rem;
+            border: 2px solid yellow;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(43, 76, 159, 0.3);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #000000;
+            font-size: 1.1rem;
+        }
+
+        .contact-method a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-method a:hover {
+            text-decoration: underline;
+        }
+
+        .success-message {
+            background: var(--success-green);
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/Kxbx97kk/ddclogo.png" alt="Darlene's Delightful Catering" class="logo-img">
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><button class="contact-btn active" onclick="location.href='contact.html'">Contact</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Page -->
+    <section class="contact-page">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Ready to plan your event? Let us bring our passion for exceptional food and service to your next celebration.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you! We've received your request and will contact you within 24 hours.
+                </div>
+                <form id="quoteForm" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate">Event Date *</label>
+                            <input type="date" id="eventDate" name="eventDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventType">Event Type *</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Select event type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="retirement">Retirement Celebration</option>
+                                <option value="professional">Professional Event</option>
+                                <option value="breakfast">Breakfast Gathering</option>
+                                <option value="dinner">Dinner Party</option>
+                                <option value="brunch">Brunch Event</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests *</label>
+                            <input type="number" id="guests" name="guests" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your event, dietary restrictions, preferred menu items, or any special requests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Request Quote</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Or Reach Us Directly</h3>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        📞 <a href="tel:+12405152454">(240) 515-2454</a>
+                    </div>
+                    <div class="contact-method">
+                        ✉️ <a href="/cdn-cgi/l/email-protection#b0d9ded6dff0d4d1c2dcd5ded5c3d4d5dcd9d7d8c4d6c5dcd3d1c4d5c2d9ded79ed3dfdd"><span class="__cf_email__" data-cfemail="0a63646c654a6e6b78666f646f796e6f66636d627e6c7f66696b7e6f7863646d24696567">[email&#160;protected]</span></a>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; color: #000000;">We typically respond within 24 hours</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://i.ibb.co/Kxbx97kk/ddclogo.png" alt="Darlene's Delightful Catering" class="footer-logo-img">
+                <h3 style="color: var(--primary-yellow); margin-top: 1rem;">Darlene's Delightful Catering</h3>
+                <p>Divine Nourishing: A Place Where Faith and Family Come Together</p>
+                <p>Exceptional catering services for all your special occasions.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Full Catering</a></li>
+                    <li><a href="services.html">Food Delivery</a></li>
+                    <li><a href="services.html">Event Planning</a></li>
+                    <li><a href="services.html">Menu Customization</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📞 <a href="tel:+12405152454" style="color: white;">(240) 515-2454</a></p>
+                <p>✉️ <a href="/cdn-cgi/l/email-protection#9cf5f2faf3dcf8fdeef0f9f2f9eff8f9f0f5fbf4e8fae9f0fffde8f9eef5f2fbb2fff3f1" style="color: white;"><span class="__cf_email__" data-cfemail="94fdfaf2fbd4f0f5e6f8f1faf1e7f0f1f8fdf3fce0f2e1f8f7f5e0f1e6fdfaf3baf7fbf9">[email&#160;protected]</span></a></p>
+                <p style="margin-top: 1rem;">Ready to plan your event?</p>
+                <a href="contact.html" class="btn" style="margin-top: 1rem; display: inline-block; background: var(--primary-yellow); color: var(--primary-blue); padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 700;">Get Quote</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Darlene's Delightful Catering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+    <script>
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+
+            // In a real application, you would send this to a server
+            console.log('Form submitted:', data);
+
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.add('show');
+
+            // Reset form
+            event.target.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Set minimum date for event date picker to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('eventDate').setAttribute('min', today);
+    </script>
+</body>
+</html>

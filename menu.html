@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Darlene's Delightful Catering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .menu-page {
+            padding: 5rem 5%;
+            background: var(--light-gray);
+        }
+
+        .menu-categories {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+        }
+
+        .menu-category {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 4px solid var(--primary-blue);
+        }
+
+        .menu-category h3 {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-yellow);
+        }
+
+        .menu-items {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .menu-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item h4 {
+            color: #000000;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p {
+            color: #000000;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/Kxbx97kk/ddclogo.png" alt="Darlene's Delightful Catering" class="logo-img">
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><button class="contact-btn" onclick="location.href='contact.html'">Contact</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu Page -->
+    <section class="menu-page">
+        <div class="section-header">
+            <h2>Our Menu</h2>
+            <p>Delicious options to make your event unforgettable</p>
+        </div>
+        <div class="menu-categories">
+            <div class="menu-category">
+                <h3>🥗 Appetizers & Starters</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h4>Shrimp Cocktail</h4>
+                        <p>Fresh gulf shrimp served with zesty cocktail sauce</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Stuffed Mushrooms</h4>
+                        <p>Baby bella mushrooms filled with herbs and cheese</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Bruschetta Platter</h4>
+                        <p>Toasted bread topped with fresh tomatoes, basil, and balsamic glaze</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Caribbean Spring Rolls</h4>
+                        <p>West-Indian spiced vegetables wrapped in crispy pastry</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍗 Main Courses</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h4>Herb-Roasted Chicken</h4>
+                        <p>Tender chicken seasoned with rosemary, thyme, and garlic</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Grilled Salmon</h4>
+                        <p>Atlantic salmon with lemon butter sauce</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Prime Rib</h4>
+                        <p>Slow-roasted beef served with au jus and horseradish cream</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Jerk Chicken</h4>
+                        <p>Authentic West-Indian jerk-spiced chicken with island flavors</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Curry Goat</h4>
+                        <p>Traditional Caribbean curry goat slow-cooked to perfection</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Vegetarian Pasta Primavera</h4>
+                        <p>Fresh seasonal vegetables tossed in garlic olive oil</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍚 Sides & Accompaniments</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h4>Garlic Mashed Potatoes</h4>
+                        <p>Creamy potatoes whipped with roasted garlic and butter</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Seasonal Roasted Vegetables</h4>
+                        <p>Farm-fresh vegetables roasted with herbs</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Rice and Peas</h4>
+                        <p>Caribbean-style coconut rice with kidney beans</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Mac and Cheese</h4>
+                        <p>Classic baked macaroni with five-cheese blend</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Plantains</h4>
+                        <p>Sweet fried plantains with a hint of cinnamon</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🍰 Desserts</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h4>New York Cheesecake</h4>
+                        <p>Rich and creamy with berry compote</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Chocolate Lava Cake</h4>
+                        <p>Warm chocolate cake with molten center</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Bread Pudding</h4>
+                        <p>Traditional Caribbean bread pudding with rum sauce</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Fruit Tart</h4>
+                        <p>Fresh seasonal fruits on vanilla custard</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Plan Your Event?</h2>
+        <p>Let us bring our passion for exceptional food and service to your next celebration.</p>
+        <a href="contact.html" class="btn btn-primary">Get Your Quote</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://i.ibb.co/Kxbx97kk/ddclogo.png" alt="Darlene's Delightful Catering" class="footer-logo-img">
+                <h3 style="color: var(--primary-yellow); margin-top: 1rem;">Darlene's Delightful Catering</h3>
+                <p>Divine Nourishing: A Place Where Faith and Family Come Together</p>
+                <p>Exceptional catering services for all your special occasions.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Full Catering</a></li>
+                    <li><a href="services.html">Food Delivery</a></li>
+                    <li><a href="services.html">Event Planning</a></li>
+                    <li><a href="services.html">Menu Customization</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📞 <a href="tel:+12405152454" style="color: white;">(240) 515-2454</a></p>
+                <p>✉️ <a href="/cdn-cgi/l/email-protection#462f282029062227342a2328233522232a2f212e3220332a25273223342f28216825292b" style="color: white;"><span class="__cf_email__" data-cfemail="97fef9f1f8d7f3f6e5fbf2f9f2e4f3f2fbfef0ffe3f1e2fbf4f6e3f2e5fef9f0b9f4f8fa">[email&#160;protected]</span></a></p>
+                <p style="margin-top: 1rem;">Ready to plan your event?</p>
+                <a href="contact.html" class="btn" style="margin-top: 1rem; display: inline-block; background: var(--primary-yellow); color: var(--primary-blue); padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 700;">Get Quote</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Darlene's Delightful Catering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>
