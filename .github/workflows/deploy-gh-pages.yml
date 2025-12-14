@@ -20,6 +20,10 @@ jobs:
         run: |
           echo "darlenedcatering.com" > "DDC Website/CNAME"
 
+      - name: Copy CNAME to site root
+        run: |
+          cp "DDC Website/CNAME" ./CNAME || true
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
