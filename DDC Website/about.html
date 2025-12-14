@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Darlene's Delightful Catering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-page {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .team-member {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-yellow);
+            box-shadow: 0 10px 30px rgba(43, 76, 159, 0.2);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            background: var(--primary-yellow);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            border: 4px solid var(--primary-blue);
+        }
+
+        .team-member h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow:
+                -2px -2px 0 white,
+                2px -2px 0 white,
+                -2px 2px 0 white,
+                2px 2px 0 white,
+                -2px 0 0 white,
+                2px 0 0 white,
+                0 -2px 0 white,
+                0 2px 0 white;
+        }
+
+        .team-role {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-bio {
+            color: var(--primary-yellow);
+            line-height: 1.8;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/Kxbx97kk/ddclogo.png" style="width:60px; background:gold; border: color 4px;border-radius: 50%; border-color:rgb(242, 246, 246); height:60px;" alt="Darlene's Delightful Catering" class="logo-img">
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><button class="contact-btn" onclick="location.href='contact.html'">Contact</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Page -->
+    <section class="about-page">
+        <div class="section-header">
+            <h2>Meet Our Team</h2>
+            <p>The passionate people behind your unforgettable events</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-avatar">👩‍🍳</div>
+                <h3>Darlene</h3>
+                <p class="team-role">Owner/Executive Chef</p>
+                <p class="team-bio">Darlene is the founder and Executive Chef of Darlene's Delightful Catering. With a lifelong passion for cooking and hospitality, she transforms every event into a culinary celebration. Her creative menus, attention to detail, and warm personal touch have made her catering service a trusted name for unforgettable gatherings.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="team-avatar">👨‍🍳</div>
+                <h3>Thomas</h3>
+                <p class="team-role">Sous Chef</p>
+                <p class="team-bio">Thomas, Darlene's son, grew up in the family kitchen learning the art of catering from the best. With years of hands-on experience alongside his mother, he brings fresh innovation while honoring family traditions. His creative flair and dedication to quality make every dish a masterpiece.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="team-avatar">🧑‍💼</div>
+                <h3>Lorenzo</h3>
+                <p class="team-role">Business Manager & Chef</p>
+                <p class="team-bio">Lorenzo, Darlene's son, serves as both Business Manager and Chef. With a whisk in one hand and a spreadsheet in the other, Lorenzo expertly balances culinary creativity with business operations. His passion for farm-fresh ingredients and outstanding customer service keeps the family business thriving.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="team-avatar">👨‍🍳</div>
+                <h3>Jeramy Johnson</h3>
+                <p class="team-role">Chief of Operations/Chef</p>
+                <p class="team-bio">Chief of Operations Jeramy Johnson brings the flavors of the Caribbean to Darlene's Delightful Catering. A family friend and culinary entrepreneur who's owned a catering company, worked as a personal chef, and operated a food truck—Jeramy's journey is as rich as his West-Indian recipes. His authentic island cuisine and operational expertise add a special cultural touch that makes every dish memorable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Work with Our Team?</h2>
+        <p>Let us bring exceptional food and delightful service to your next event.</p>
+        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://i.ibb.co/Kxbx97kk/ddclogo.png" alt="Darlene's Delightful Catering" class="footer-logo-img">
+                <h3 style="color: var(--primary-yellow); margin-top: 1rem;">Darlene's Delightful Catering</h3>
+                <p style="color: white;>Divine Nourishing: A Place Where Faith, Family and, Food Come Together</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Full Catering</a></li>
+                    <li><a href="services.html">Food Delivery</a></li>
+                    <li><a href="services.html">Event Planning</a></li>
+                    <li><a href="services.html">Menu Customization</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📞 <a href="tel:+12405152454" style="color: white;">(240) 515-2454</a></p>
+                <p>✉️ <a href="/cdn-cgi/l/email-protection#aac3c4ccc5eacecbd8c6cfc4cfd9cecfc6c3cdc2deccdfc6c9cbdecfd8c3c4cd84c9c5c7" style="color: white;"><span class="__cf_email__" data-cfemail="0861666e67486c697a646d666d7b6c6d64616f607c6e7d646b697c6d7a61666f266b6765">[email&#160;protected]</span></a></p>
+                <p style="margin-top: 1rem;">Ready to plan your event?</p>
+                <a href="contact.html" class="btn" style="margin-top: 1rem; display: inline-block; background: var(--primary-yellow); color: var(--primary-blue); padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 700;">Get Quote</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Darlene's Delightful Catering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>
