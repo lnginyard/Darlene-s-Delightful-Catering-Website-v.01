@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#f8efe6"/>
+  <g fill="#d96e45" font-family="Arial, Helvetica, sans-serif">
+    <rect x="40" y="40" width="720" height="520" rx="16" fill="#fff" stroke="#f0c9b1" stroke-width="6"/>
+    <text x="50%" y="45%" font-size="40" text-anchor="middle" fill="#d96e45">Menu Item 1</text>
+    <text x="50%" y="62%" font-size="20" text-anchor="middle" fill="#666">Sample photo placeholder</text>
+  </g>
+</svg>

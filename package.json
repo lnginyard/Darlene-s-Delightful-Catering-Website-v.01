@@ -1,0 +1,16 @@
+{
+  "name": "ddc-image-tools",
+  "version": "0.1.0",
+  "description": "Scripts to fetch royalty-free bright food images and generate optimized sizes for Darlene's Delightful Catering site",
+  "main": "scripts/fetch-images.js",
+  "scripts": {
+    "fetch-images": "node scripts/fetch-images.js",
+    "fetch-and-optimize": "node scripts/fetch-images.js --optimize"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.12",
+    "sharp": "^0.32.1"
+  }
+}

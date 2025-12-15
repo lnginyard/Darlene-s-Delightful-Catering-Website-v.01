@@ -1,0 +1,12 @@
+[
+  {"filename":"starters-shrimp-cocktail","query":"shrimp cocktail plated","category":"starters","caption":"Shrimp Cocktail"},
+  {"filename":"bruschetta-platter","query":"bruschetta tomatoes basil","category":"starters","caption":"Bruschetta Platter"},
+  {"filename":"herb-roasted-chicken","query":"herb roasted chicken","category":"mains","caption":"Herb-Roasted Chicken"},
+  {"filename":"grilled-salmon","query":"grilled salmon lemon","category":"mains","caption":"Grilled Salmon"},
+  {"filename":"garlic-mashed-potatoes","query":"garlic mashed potatoes","category":"sides","caption":"Garlic Mashed Potatoes"},
+  {"filename":"seasonal-roasted-vegetables","query":"roasted seasonal vegetables","category":"sides","caption":"Seasonal Roasted Vegetables"},
+  {"filename":"new-york-cheesecake","query":"new york cheesecake","category":"desserts","caption":"New York Cheesecake"},
+  {"filename":"chocolate-lava-cake","query":"chocolate lava cake molten","category":"desserts","caption":"Chocolate Lava Cake"},
+  {"filename":"wedding-platter","query":"wedding food display buffet","category":"events","caption":"Wedding Platter"},
+  {"filename":"dessert-table","query":"dessert table wedding","category":"events","caption":"Dessert Table"}
+]
